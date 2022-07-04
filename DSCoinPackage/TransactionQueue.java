@@ -7,7 +7,7 @@ public class TransactionQueue {
   public int numTransactions;
 
   public void AddTransactions (Transaction transaction) {
-
+      Transaction tr;
   }
   
   public Transaction RemoveTransaction () throws EmptyQueueException {
