@@ -32,7 +32,7 @@ public class TransactionQueue {
   public Transaction RemoveTransaction () throws EmptyQueueException {
     if(numTransactions==0)
     {
-      throw new EmptyQueueException("Error in RemoveTransaction");
+      throw new EmptyQueueException();
     }
     else if(numTransactions==1)
     {
