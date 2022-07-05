@@ -6,4 +6,5 @@ public class Transaction {
   public Members Source;
   public Members Destination;
   public TransactionBlock coinsrc_block;
+  Transaction transaction_next_in_queue;
 }
