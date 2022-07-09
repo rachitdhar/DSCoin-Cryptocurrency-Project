@@ -41,6 +41,8 @@ public class TransactionBlock {
         boolean foundCoin = false;
 
         while (true) {
+            if (tb == t.coinsrc_block) break;
+            
             Transaction tb_arr[] = tb.trarray;
             for (int i = 0; i < tb_arr.length; i++) {
                 if (tb_arr[i].coinID == t.coinID) {
