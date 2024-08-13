@@ -6,12 +6,12 @@ import HelperClasses.MerkleTree;
 public class BlockChain_Malicious {
 
   public int tr_count;
-  public static final String start_string = "DSCoin";
+  public static final String START_STRING = "DSCoin";
   public TransactionBlock[] lastBlocksList;
   
 
   public static boolean checkTransactionBlock (TransactionBlock tB) {
-    if(!(tB.dgst.substring(0,3)=="0000"))
+    if(!(tB.dgst.substring(0,3).equalsIgnoreCase("0000")))
     {
       return false;
     }
@@ -25,7 +25,7 @@ public class BlockChain_Malicious {
     }
     else
     {
-      if(!tB.dgst.equals( To_check.Fn(start_string+"#"+tB.trsummary+"#"+tB.nonce)))
+      if(!tB.dgst.equals( To_check.Fn(START_STRING+"#"+tB.trsummary+"#"+tB.nonce)))
       {
         return false;
       }
